@@ -9,5 +9,7 @@ package com.hms.model;
  * @author PC
  */
 public class PathologicalTest {
-    
+        System.out.println("Showing the homepage");
+        new Home().setVisible(true);
+        PathologicalTest pTest = new PathologicalTest();
 }
