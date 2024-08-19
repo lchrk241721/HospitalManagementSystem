@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.hms.model;
+import com.hms.view.*;
 
 /**
  *
@@ -10,9 +11,9 @@ package com.hms.model;
  */
 public class PathologicalTest {
 
-    String title;
-    double cost;
-    boolean isAvailable;
+    private String title;
+    private double cost;
+    private boolean isAvailable;
 
     public PathologicalTest(String title, double cost, boolean isAvailable) {
         this.title = title;
@@ -21,12 +22,56 @@ public class PathologicalTest {
     }
 
     public PathologicalTest() {
+        System.out.println("This is the default Constructor");
     }
 
-    String show() {
-        String output = "Test name: " + this.title + "<br>"
-                + "Cost: " + this.cost + "<br>"
-                + "Availability: " + this.isAvailable;
+    public String show() {
+        String output = "Test name: " + this.getTitle() + " "
+                + "Cost: " + this.getCost() + " "
+                + "Availability: " + this.isIsAvailable();
         return output;
     }
+
+    /**
+     * @return the title
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * @return the cost
+     */
+    public double getCost() {
+        return cost;
+    }
+
+    /**
+     * @return the isAvailable
+     */
+    public boolean isIsAvailable() {
+        return isAvailable;
+    }
+
+    /**
+     * @param title the title to set
+     */
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    /**
+     * @param cost the cost to set
+     */
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    /**
+     * @param isAvailable the isAvailable to set
+     */
+    public void setIsAvailable(boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+    
 }
