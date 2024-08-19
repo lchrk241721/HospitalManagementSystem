@@ -6,10 +6,27 @@ package com.hms.model;
 
 /**
  *
- * @author PC
+ * @author Bakhtiar Mazrur
  */
 public class PathologicalTest {
-        System.out.println("Showing the homepage");
-        new Home().setVisible(true);
-        PathologicalTest pTest = new PathologicalTest();
+
+    String title;
+    double cost;
+    boolean isAvailable;
+
+    public PathologicalTest(String title, double cost, boolean isAvailable) {
+        this.title = title;
+        this.cost = cost;
+        this.isAvailable = isAvailable;
+    }
+
+    public PathologicalTest() {
+    }
+
+    String show() {
+        String output = "Test name: " + this.title + "<br>"
+                + "Cost: " + this.cost + "<br>"
+                + "Availability: " + this.isAvailable;
+        return output;
+    }
 }
