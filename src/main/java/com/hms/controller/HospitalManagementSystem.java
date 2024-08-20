@@ -8,12 +8,21 @@ import com.hms.view.*;
 
 /**
  *
- * @author PC
+ * @author Bakhtiar Mazrur
  */
 public class HospitalManagementSystem {
 
     public static void main(String[] args) {
+        System.out.println("Showing the homepage");
         Home viewHome = new Home();
         viewHome.setVisible(true);
+        PathologicalTest pTest = new PathologicalTest("CBC", 400, true);
+        System.out.println(pTest.returnLabTestInfo());
+        pTest.setCost(300);
+        System.out.println("The updated cost of CBC is "+ pTest.getCost());
+        System.out.println(pTest.returnLabTestInfo());
+        
+//        PathologyTest viewHome = new PathologyTest();
+//        viewHome.setVisible(true);
     }
 }

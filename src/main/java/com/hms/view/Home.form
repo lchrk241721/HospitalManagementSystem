@@ -4,32 +4,32 @@
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="homeMenu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Home"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" name="menuPathologyTest">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Test"/>
+            <Property name="text" type="java.lang.String" value="Pathological Test"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="linkNewTest">
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Test"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="linkNewTestActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="linkSearch">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Test History"/>
+                <Property name="text" type="java.lang.String" value="Search"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu3">
+        <Menu class="javax.swing.JMenu" name="linkPatientList">
           <Properties>
             <Property name="text" type="java.lang.String" value="Patient List"/>
           </Properties>
