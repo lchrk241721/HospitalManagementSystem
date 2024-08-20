@@ -12,11 +12,13 @@ import com.hms.view.*;
 public class PathologicalTest {
 
     private String title;
+    private String testType;
     private double cost;
     private boolean isAvailable;
 
-    public PathologicalTest(String title, double cost, boolean isAvailable) {
+    public PathologicalTest(String title, String testType, double cost, boolean isAvailable) {
         this.title = title;
+        this.testType = testType;
         this.cost = cost;
         this.isAvailable = isAvailable;
     }
@@ -27,6 +29,7 @@ public class PathologicalTest {
 
     public String returnLabTestInfo() {
         String output = "Test name: " + this.getTitle() + " "
+                + "Test Type: " + this.getTestType() + " "
                 + "Cost: " + this.getCost() + " "
                 + "Availability: " + this.isIsAvailable();
         return output;
@@ -71,6 +74,20 @@ public class PathologicalTest {
      */
     public void setIsAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
+    }
+
+    /**
+     * @return the testType
+     */
+    public String getTestType() {
+        return testType;
+    }
+
+    /**
+     * @param testType the testType to set
+     */
+    public void setTestType(String testType) {
+        this.testType = testType;
     }
     
 }

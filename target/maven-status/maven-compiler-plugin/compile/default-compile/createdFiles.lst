@@ -1,12 +1,13 @@
 com\hms\view\PathologyTest$4.class
+com\hms\model\PathologicalTest.class
+com\hms\view\PathologyTest$3.class
+com\hms\view\PathologyTest$2.class
+com\hms\view\PathologyTest.class
+com\hms\view\PathologyTest$7.class
 com\hms\view\Home$2.class
 com\hms\view\PathologyTest$1.class
 com\hms\view\Home$1.class
-com\hms\model\PathologicalTest.class
 com\hms\view\Home.class
 com\hms\view\PathologyTest$6.class
-com\hms\view\PathologyTest$3.class
-com\hms\view\PathologyTest$2.class
 com\hms\controller\HospitalManagementSystem.class
 com\hms\view\PathologyTest$5.class
-com\hms\view\PathologyTest.class
