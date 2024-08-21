@@ -36,8 +36,10 @@ public class PathologyTest extends javax.swing.JFrame {
         btnPathologyDataSubmission = new javax.swing.JButton();
         btCancel = new javax.swing.JButton();
         testInfo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblTestType = new javax.swing.JLabel();
         drpdnTestType = new javax.swing.JComboBox<>();
+        lblReagent = new javax.swing.JLabel();
+        inputReagentName = new javax.swing.JTextField();
 
         resultPopup.setMaximumSize(new java.awt.Dimension(854, 480));
         resultPopup.setMinimumSize(new java.awt.Dimension(320, 240));
@@ -95,12 +97,20 @@ public class PathologyTest extends javax.swing.JFrame {
         testInfo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         testInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jLabel1.setText("Test Type: ");
+        lblTestType.setText("Test Type: ");
 
         drpdnTestType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "CBC", "RBS", "NS1", "Creatinine" }));
         drpdnTestType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 drpdnTestTypeActionPerformed(evt);
+            }
+        });
+
+        lblReagent.setText("Reagent:");
+
+        inputReagentName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputReagentNameActionPerformed(evt);
             }
         });
 
@@ -111,20 +121,24 @@ public class PathologyTest extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(93, 93, 93)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(testPrice)
-                    .addComponent(testName)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(testInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
-                    .addComponent(isTestAvailability)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnPathologyDataSubmission)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btCancel))
-                    .addComponent(pathologyTestName, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
-                    .addComponent(pathologyTestCost, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
-                    .addComponent(drpdnTestType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(testInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(testPrice)
+                            .addComponent(testName)
+                            .addComponent(lblTestType)
+                            .addComponent(lblReagent, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(isTestAvailability)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnPathologyDataSubmission)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btCancel))
+                            .addComponent(pathologyTestName, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
+                            .addComponent(pathologyTestCost, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
+                            .addComponent(drpdnTestType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(inputReagentName))))
                 .addGap(171, 171, 171))
         );
         layout.setVerticalGroup(
@@ -136,9 +150,13 @@ public class PathologyTest extends javax.swing.JFrame {
                     .addComponent(pathologyTestName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(lblTestType)
                     .addComponent(drpdnTestType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblReagent)
+                    .addComponent(inputReagentName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(testPrice)
                     .addComponent(pathologyTestCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -150,7 +168,7 @@ public class PathologyTest extends javax.swing.JFrame {
                     .addComponent(btCancel))
                 .addGap(18, 18, 18)
                 .addComponent(testInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();
@@ -163,10 +181,11 @@ public class PathologyTest extends javax.swing.JFrame {
     private void btnPathologyDataSubmissionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPathologyDataSubmissionActionPerformed
         String testName = pathologyTestName.getText();
         String testType = (String)drpdnTestType.getSelectedItem();
+        String reagentName = (String)inputReagentName.getText();
         double cost = Double.parseDouble(pathologyTestCost.getText());
         boolean availability = isTestAvailability.isSelected();
         
-        PathologicalTest pTest = new PathologicalTest(testName, testType ,cost, availability);
+        PathologicalTest pTest = new PathologicalTest(testName, testType, reagentName,cost, availability);
         
         testInfo.setText(pTest.returnLabTestInfo());
     }//GEN-LAST:event_btnPathologyDataSubmissionActionPerformed
@@ -191,6 +210,10 @@ public class PathologyTest extends javax.swing.JFrame {
     private void drpdnTestTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drpdnTestTypeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_drpdnTestTypeActionPerformed
+
+    private void inputReagentNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputReagentNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputReagentNameActionPerformed
 
 //    /**
 //     * @param args the command line arguments
@@ -231,8 +254,10 @@ public class PathologyTest extends javax.swing.JFrame {
     private javax.swing.JButton btCancel;
     private javax.swing.JButton btnPathologyDataSubmission;
     private javax.swing.JComboBox<String> drpdnTestType;
+    private javax.swing.JTextField inputReagentName;
     private javax.swing.JCheckBox isTestAvailability;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblReagent;
+    private javax.swing.JLabel lblTestType;
     private javax.swing.JTextField pathologyTestCost;
     private javax.swing.JTextField pathologyTestName;
     private javax.swing.JPopupMenu resultPopup;
