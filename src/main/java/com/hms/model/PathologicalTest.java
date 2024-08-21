@@ -9,16 +9,15 @@ import com.hms.view.*;
  *
  * @author Bakhtiar Mazrur
  */
-public class PathologicalTest {
+public class PathologicalTest extends LabTest {
 
-    private String title;
     private String testType;
-    private double cost;
-    private boolean isAvailable;
-
-    public PathologicalTest(String title, String testType, double cost, boolean isAvailable) {
+    protected String reagent;
+    
+    public PathologicalTest(String title, String testType, String reagent, double cost, boolean isAvailable) {
         this.title = title;
         this.testType = testType;
+        this.reagent = reagent;
         this.cost = cost;
         this.isAvailable = isAvailable;
     }
@@ -30,6 +29,7 @@ public class PathologicalTest {
     public String returnLabTestInfo() {
         String output = "Test name: " + this.getTitle() + " "
                 + "Test Type: " + this.getTestType() + " "
+                + "Reagent Name: " + this.getReagent()+" "
                 + "Cost: " + this.getCost() + " "
                 + "Availability: " + this.isIsAvailable();
         return output;
@@ -88,6 +88,20 @@ public class PathologicalTest {
      */
     public void setTestType(String testType) {
         this.testType = testType;
+    }
+
+    /**
+     * @return the reagent
+     */
+    public String getReagent() {
+        return reagent;
+    }
+
+    /**
+     * @param reagent the reagent to set
+     */
+    public void setReagent(String reagent) {
+        this.reagent = reagent;
     }
     
 }

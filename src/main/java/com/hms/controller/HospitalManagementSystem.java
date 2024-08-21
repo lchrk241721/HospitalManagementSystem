@@ -16,11 +16,14 @@ public class HospitalManagementSystem {
         System.out.println("Showing the homepage");
         Home viewHome = new Home();
         viewHome.setVisible(true);
-        PathologicalTest pTest = new PathologicalTest("Blood", "CBC", 400, true);
+        PathologicalTest pTest = new PathologicalTest("Blood test", "RBC Count", "Lysis", 300, true);
         System.out.println(pTest.returnLabTestInfo());
-        pTest.setCost(300);
-        System.out.println("The updated cost of CBC is "+ pTest.getCost());
-        System.out.println(pTest.returnLabTestInfo());
+        
+        RadioLogicalTest rTest = new RadioLogicalTest("X-ray", "4X2", 400, true);
+        System.out.println(rTest.returnLabTestInfo());
+//        pTest.setCost(300);
+//        System.out.println("The updated cost of CBC is "+ pTest.getCost());
+//        System.out.println(pTest.returnLabTestInfo());
         
 //        PathologyTest viewHome = new PathologyTest();
 //        viewHome.setVisible(true);
