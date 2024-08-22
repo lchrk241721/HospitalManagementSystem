@@ -11,20 +11,17 @@ import com.hms.view.*;
  */
 public class PathologicalTest extends LabTest {
 
-    private String testType;
+    protected String testType;
     protected String reagent;
     
     public PathologicalTest(String title, String testType, String reagent, double cost, boolean isAvailable) {
-        this.title = title;
+        super(title, cost, isAvailable);
         this.testType = testType;
         this.reagent = reagent;
-        this.cost = cost;
-        this.isAvailable = isAvailable;
     }
 
-    public PathologicalTest() {
-        System.out.println("This is the default Constructor");
-    }
+//public PathologicalTest(){
+//}
 
     public String returnLabTestInfo() {
         String output = "Test name: " + this.getTitle() + " "
@@ -33,47 +30,6 @@ public class PathologicalTest extends LabTest {
                 + "Cost: " + this.getCost() + " "
                 + "Availability: " + this.isIsAvailable();
         return output;
-    }
-    /**
-     * @return the title
-     */
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * @return the cost
-     */
-    public double getCost() {
-        return cost;
-    }
-
-    /**
-     * @return the isAvailable
-     */
-    public boolean isIsAvailable() {
-        return isAvailable;
-    }
-
-    /**
-     * @param title the title to set
-     */
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    /**
-     * @param cost the cost to set
-     */
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    /**
-     * @param isAvailable the isAvailable to set
-     */
-    public void setIsAvailable(boolean isAvailable) {
-        this.isAvailable = isAvailable;
     }
 
     /**
@@ -103,5 +59,5 @@ public class PathologicalTest extends LabTest {
     public void setReagent(String reagent) {
         this.reagent = reagent;
     }
-    
+
 }

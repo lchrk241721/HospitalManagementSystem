@@ -27,5 +27,6 @@ public class HospitalManagementSystem {
         
 //        PathologyTest viewHome = new PathologyTest();
 //        viewHome.setVisible(true);
+
     }
 }

@@ -10,17 +10,11 @@ package com.hms.model;
  */
 public class RadioLogicalTest extends LabTest{
    
-    private String plateDimension;
+    protected String plateDimension;
     
     public RadioLogicalTest(String title, String plateDimension, double cost, boolean isAvailable) {
-        this.title = title;
+        super(title, cost, isAvailable);
         this.plateDimension = plateDimension;
-        this.cost = cost;
-        this.isAvailable = isAvailable;
-    }
-
-    public RadioLogicalTest() {
-        System.out.println("This is the default Constructor");
     }
 
     public String returnLabTestInfo() {
@@ -30,42 +24,20 @@ public class RadioLogicalTest extends LabTest{
                 + "Availability: " + this.isIsAvailable();
         return output;
     }
-    
-    public RadioLogicalTest(String plateDimension) {
-        this.plateDimension = plateDimension;
-    }
 
+    /**
+     * @return the plateDimension
+     */
     public String getPlateDimension() {
         return plateDimension;
     }
 
+    /**
+     * @param plateDimension the plateDimension to set
+     */
     public void setPlateDimension(String plateDimension) {
         this.plateDimension = plateDimension;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    public boolean isIsAvailable() {
-        return isAvailable;
-    }
-
-    public void setIsAvailable(boolean isAvailable) {
-        this.isAvailable = isAvailable;
-    }
-    
 }
 
